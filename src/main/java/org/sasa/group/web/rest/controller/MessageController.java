@@ -17,7 +17,6 @@ import javax.validation.Valid;
 public class MessageController {
 
     private static final int SWAGGER_HTTP_STATUS_CREATED = 201;
-    private static final int SWAGGER_HTTP_STATUS_OK = 200;
 
     @Autowired
     private MessageServiceImpl messageServiceImpl;
