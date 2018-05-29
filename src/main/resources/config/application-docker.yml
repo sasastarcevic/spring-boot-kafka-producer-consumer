@@ -3,18 +3,15 @@ server:
 
 # Kafka
 kafka:
-  bootstrapAddress: 10.0.2.15:9092,10.0.2.15:9093,10.0.2.15:9094
+  bootstrapAddress: 10.0.120.1:9092,10.0.120.1:9093,10.0.120.1:9094
 message:
   kafka:
     topic: message-topic00
 
-#
-# 10.0.2.15 -> IP for host machine (necessary for docker)
-#
 spring.kafka.bootstrap-servers:
-  - 10.0.2.15:9092
-  - 10.0.2.15:9093
-  - 10.0.2.15:9094
+  - 10.0.120.1:9092
+  - 10.0.120.1:9093
+  - 10.0.120.1:9094
 
 spring.kafka.consumer.properties.spring.json.trusted.packages: "*"
 spring.kafka.consumer.auto-offset-reset: earliest
