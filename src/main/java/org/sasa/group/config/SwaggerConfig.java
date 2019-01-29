@@ -26,7 +26,7 @@ public class SwaggerConfig {
 
     private ApiInfo apiInfo() {
         return new ApiInfoBuilder()
-                .title("Spring Boot Kafka Application")
+                .title("Performance testing - DEMO APP")
                 .description("Application Spring REST")
                 .build();
     }

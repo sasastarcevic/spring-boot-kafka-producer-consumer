@@ -8,6 +8,7 @@ import org.sasa.group.web.rest.resource.MessageDto;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
@@ -27,8 +28,10 @@ public class MessageController {
             consumes = MediaType.APPLICATION_JSON_VALUE)
     @ResponseStatus(HttpStatus.CREATED)
     @ApiResponses(value = {@ApiResponse(code = SWAGGER_HTTP_STATUS_CREATED, message = "Created")})
-    public void addMessage(final @Valid @RequestBody MessageDto messageDto) {
+    public ResponseEntity addMessage(final @Valid @RequestBody MessageDto messageDto) {
         messageServiceImpl.addMessage(messageDto);
+
+        return ResponseEntity.accepted().body(messageDto);
     }
 
 }
