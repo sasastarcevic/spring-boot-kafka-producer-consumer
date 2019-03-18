@@ -9,6 +9,6 @@ public class MessageDto {
 
     private String messageType;
 
-    private Object value;
+    private String value;
 
 }

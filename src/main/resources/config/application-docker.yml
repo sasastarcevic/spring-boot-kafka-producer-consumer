@@ -3,13 +3,15 @@ server:
 
 # Kafka
 kafka:
-  bootstrapAddress: 172.20.0.1:9092
+  bootstrapAddress: 172.20.0.1:9091,172.20.0.1:9092,172.20.0.1:9093
 message:
   kafka:
     topic: message-topic00
 
 spring.kafka.bootstrap-servers:
+  - 172.20.0.1:9091
   - 172.20.0.1:9092
+  - 172.20.0.1:9093
 
 spring.kafka.consumer.properties.spring.json.trusted.packages: "*"
 spring.kafka.consumer.auto-offset-reset: earliest
