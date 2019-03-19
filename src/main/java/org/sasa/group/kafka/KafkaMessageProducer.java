@@ -19,8 +19,6 @@ import org.springframework.util.concurrent.ListenableFutureCallback;
 @Service
 public class KafkaMessageProducer {
 
-    private static final Logger LOGGER = LoggerFactory.getLogger(KafkaMessageProducer.class);
-
     @Autowired
     private KafkaTemplate<String, MessageDto> messageKafkaTemplate;
 
@@ -35,6 +33,8 @@ public class KafkaMessageProducer {
 
             @Override
             public void onSuccess(SendResult<String,MessageDto> result) {
+                log.info("####################################################################################");
+                log.info("");
                 log.info("Kafka Producer: " + ObjectUtil.javaObjectToJsonString(result.getRecordMetadata()));
             }
 

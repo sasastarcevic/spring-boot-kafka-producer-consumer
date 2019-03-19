@@ -17,7 +17,7 @@ public class SwaggerConfig {
     @Bean
     public Docket api() {
         return new Docket(DocumentationType.SWAGGER_2)
-                .groupName("Sasa Group")
+                .groupName("Group Name")
                 .apiInfo(apiInfo())
                 .select()
                 .paths(regex("/v1.*"))
@@ -26,7 +26,7 @@ public class SwaggerConfig {
 
     private ApiInfo apiInfo() {
         return new ApiInfoBuilder()
-                .title("Performance testing - DEMO APP")
+                .title("Kafka and Spring Boot")
                 .description("Application Spring REST")
                 .build();
     }
